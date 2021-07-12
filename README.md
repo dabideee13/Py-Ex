@@ -1,1 +1,1 @@
-# Simple-Easy-Exercises
+# Simple-Exercises
