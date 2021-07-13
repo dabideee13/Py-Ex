@@ -1,6 +1,7 @@
 # mod3_act2.py
 
 """
+Tasks
 1. Write a program that adds two numbers.
 2. The program will ask to enter first and second number.
 3. The program will display "The sum of n1 and n2 is nTotal"
