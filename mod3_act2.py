@@ -16,6 +16,9 @@ def add(fst_num, snd_num):
     return fst_num + snd_num
 
 
+yes_list = ['Yes', 'yes', 'Y', 'y']
+no_list = ['No', 'no', 'N', 'n']
+
 while True:
 
     fst_num = float(input("First number: "))
@@ -23,9 +26,6 @@ while True:
     total = add(fst_num, snd_num)
 
     print(f"The sum of {fst_num} and {snd_num} is {total}\n")
-
-    yes_list = ['Yes', 'yes', 'Y', 'y']
-    no_list = ['No', 'no', 'N', 'n']
 
     trial = input("Try again? (Yes or No): ")
 
