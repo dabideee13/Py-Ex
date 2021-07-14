@@ -29,7 +29,6 @@ while True:
     choice = input("Action: ")
 
     if choice.lower() == 'add data':
-
         key = input("Enter Key: ")
         val = input("Enter Value: ")
 
@@ -38,21 +37,36 @@ while True:
 
         else:
 
-            if counter == 0:
+            if isinstance(data_storage[key], str):
                 data_storage[key] = [data_storage[key]]
                 data_storage[key].append(val)
 
-                counter += 1
-
-            else:
+            elif isinstance(data_storage[key], list):
                 data_storage[key].append(val)
 
         print(data_storage, '\n')
 
     if choice.lower() == 'delete data':
-
         key = input("Enter Key: ")
-        data_storage.pop(key)
+
+        if isinstance(data_storage[key], list):
+            print(
+                "\n"
+                "Choose: Delete the whole item (Delete Item)"
+                " or just an element"
+                " from the list of values (Delete Value).\n"
+            )
+            choice = input("Action: ")
+
+            if choice.lower() == "delete item":
+                data_storage.pop(key)
+
+            if choice.lower() == "delete value":
+                val = input("Enter Val: ")
+                data_storage[key].remove(val)
+
+        else:
+            data_storage.pop(key)
 
         print(data_storage, '\n')
 
