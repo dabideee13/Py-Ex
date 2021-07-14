@@ -68,8 +68,14 @@ while True:
         else:
             data_storage.pop(key)
 
+        if isinstance(data_storage[key], list) and len(data_storage) == 1:
+            data_storage[key] = data_storage[key][0]
+
         print(data_storage, '\n')
 
     if choice.lower() == 'end':
         print("THANK YOU")
         break
+
+# TODO: Improve handle possible errors in user input
+# TODO: Make this more robust
