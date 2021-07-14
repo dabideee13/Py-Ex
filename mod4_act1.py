@@ -21,6 +21,7 @@ Tasks
 """
 
 data_storage = dict()
+counter = 0
 
 while True:
 
@@ -32,16 +33,28 @@ while True:
         key = input("Enter Key: ")
         val = input("Enter Value: ")
 
-        data_storage[key] = val
+        if key not in data_storage.keys():
+            data_storage[key] = val
 
-        print(data_storage)
+        else:
+
+            if counter == 0:
+                data_storage[key] = [data_storage[key]]
+                data_storage[key].append(val)
+
+                counter += 1
+
+            else:
+                data_storage[key].append(val)
+
+        print(data_storage, '\n')
 
     if choice.lower() == 'delete data':
 
         key = input("Enter Key: ")
         data_storage.pop(key)
 
-        print(data_storage)
+        print(data_storage, '\n')
 
     if choice.lower() == 'end':
         print("THANK YOU")
