@@ -1,2 +1,2 @@
-# Python-Simple-Exercises
+# Python-Exercises
 Problem statements compiled from different sources. Not mine.
