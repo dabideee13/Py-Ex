@@ -18,6 +18,7 @@ class Employee:
         self.email = email
         self.mobile_number = mobile_number
 
+        print(f"Employee")
         print(f"Name: {self.name}")
         print(f"Email: {self.email}")
         print(f"Mobile Number: {self.mobile_number}\n")
