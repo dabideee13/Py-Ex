@@ -19,6 +19,7 @@ class Car:
         self.model = model
         self.manufacturer = manufacturer
 
+        print(f"Car")
         print(f"Color: {self.color}")
         print(f"Model: {self.model}")
         print(f"Manufacturer: {self.manufacturer}\n")
