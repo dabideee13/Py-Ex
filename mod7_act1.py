@@ -58,6 +58,7 @@ Address: {address}
                 print(f.read())
 
         elif action == 'd':
+            print("Thank you!")
             break
 
 
