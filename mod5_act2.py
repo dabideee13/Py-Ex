@@ -45,21 +45,26 @@ def perform_operation(operation, first, second):
             print("Invalid input: zero division error\n")
 
 
-yes_list = ['yes', 'y']
-no_list = ['no', 'n']
+def main():
 
-while True:
+    yes_list = ['yes', 'y']
+    no_list = ['no', 'n']
 
-    operation = input("Add, Subtract, Multiply, or Divide: ")
-    first = float(input("Enter first number: "))
-    second = float(input("Enter second number: "))
-    perform_operation(operation, first, second)
+    while True:
 
-    trial = input("\nTry again? (Yes/No): ")
+        operation = input("Add, Subtract, Multiply, or Divide: ")
+        first = float(input("Enter first number: "))
+        second = float(input("Enter second number: "))
+        perform_operation(operation, first, second)
 
-    if trial.strip().lower() in yes_list:
-        continue
+        trial = input("\nTry again? (Yes/No): ")
 
-    elif trial.strip().lower() in no_list:
-        break
+        if trial.strip().lower() in yes_list:
+            continue
 
+        elif trial.strip().lower() in no_list:
+            break
+
+
+if __name__ == '__main__':
+    main()
